@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use Illuminate\Http\Request;
-use app\Models\Categoria;
 
 class CategoriaController extends Controller
 {
@@ -35,7 +35,10 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        return "ok";
+        Categoria::create([
+            'nome'=>$request->get('nome')
+        ]);
+        return redirect()->back()->with('message','Categoria Criada');
     }
 
     /**
