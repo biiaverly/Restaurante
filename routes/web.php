@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['register'=>false]);
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('categoria',CategoriaController::class);
+
+
