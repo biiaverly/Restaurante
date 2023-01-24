@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <form action="{{route('categoria.store')}}" method="post">@csrf
             <div class="card">
                 <div class="card-header">Categorias de Comida</div>
 
@@ -18,6 +19,7 @@
 
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>
