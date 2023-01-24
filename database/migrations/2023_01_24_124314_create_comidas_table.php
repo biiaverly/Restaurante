@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nome');
             $table->text('descrição');
             $table->double('preço');
+            $table->integer('id_categoria');
             $table->timestamps();
         });
     }

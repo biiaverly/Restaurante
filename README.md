@@ -74,3 +74,6 @@ Criando a categoria:
 php artisan make:model Categoria -m
 
 Com isso irá criar o Modelo categoria, e a migration.
+Criar categoria e food.
+
+
