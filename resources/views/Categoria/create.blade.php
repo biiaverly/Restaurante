@@ -10,7 +10,7 @@
             @endif
             <form action="{{route('categoria.store')}}" method="post">@csrf
             <div class="card">
-                <div class="card-header">Manage Food Category</div>
+                <div class="card-header">Gerenciamento de comidas</div>
 
                 <div class="card-body">
                     
