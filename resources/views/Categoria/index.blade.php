@@ -7,11 +7,37 @@
              <div class="card-header">Lista de categorias</div>
 
                 <div class="card-body">
-                    @foreach ($listacategoria as $categoria)
-                        <p>{{$categoria->nome}}</p>                        
-                    @endforeach
-                   
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            @foreach ($listacategoria as $key=>$categoria)
 
+                                
+                            
+                          <tr>
+                            <th scope="row">{{$key+1}}</th>
+                            <td>{{$categoria->nome}}</td>
+                            <td>
+                                <a href="{{route('categoria.edit',[$categoria->id])}}">
+                                    <button class="btn btn-outline-success" >Edit</button>                                                              
+                                
+                                </a>                                
+                            <td><a href="{{route('categoria.edit',[$categoria->id])}}">
+                                <button class="btn btn-outline-danger" >Delete</button>                                                              
+                            
+                            </a></td>
+                          </tr>
+                          @endforeach
+
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>

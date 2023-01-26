@@ -13,8 +13,8 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('Categoria.create');
+    {   $listacategoria=Categoria::latest()->get();
+        return view('Categoria.index',compact('listacategoria'));
     }
 
     /**
